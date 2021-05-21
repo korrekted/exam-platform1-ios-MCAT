@@ -28,16 +28,16 @@ final class OSlide1View: OSlideView {
 private extension OSlide1View {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 483.scale : 370.scale)
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 94.scale : 50.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 277.scale),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 347.scale : 300.scale)
         ])
         
         NSLayoutConstraint.activate([
             text1Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             text1Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            text1Label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8.scale)
+            text1Label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 49.scale)
         ])
         
         NSLayoutConstraint.activate([
